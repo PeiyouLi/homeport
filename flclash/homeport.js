@@ -24,11 +24,13 @@ const SUFFIX = [
   // Claude / Anthropic
   "claude.ai", "claude.com", "clau.de", "anthropic.com",
   "claudeusercontent.com", "claudemcpcontent.com", "modelcontextprotocol.io",
+  "ant.dev", "antspace.dev",
   // 监控 / 风控 / 验证 / 支付
   "sentry.io", "datadoghq.com", "growthbook.io", "usefathom.com", "segment.io",
   "siftscience.com", "hcaptcha.com", "challenges.cloudflare.com",
-  "intercom.io", "intercomcdn.com",
+  "intercom.io", "intercomcdn.com", "intercomassets.com", "intercom-messenger.com",
   "stripe.com", "stripe.network", "stripecdn.com", "withpersona.com",
+  "yoti.com", "statsigapi.net",
   // Google（含 Gmail、Google Pay）
   "google.com", "googleapis.com", "gstatic.com", "googleusercontent.com",
   "gmail.com", "recaptcha.net",
@@ -74,6 +76,9 @@ const main = (config) => {
     "IP-CIDR6,2607:6bc0:11::/48,REJECT,no-resolve",
     ...SUFFIX.map((d) => `DOMAIN-SUFFIX,${d},${EXIT}`),
     ...KEYWORD.map((k) => `DOMAIN-KEYWORD,${k},${EXIT}`),
+    `IP-CIDR,34.8.0.0/16,${EXIT},no-resolve`,
+    `IP-CIDR,153.61.208.0/20,${EXIT},no-resolve`,
+    `IP-CIDR,153.61.224.0/22,${EXIT},no-resolve`,
     `IP-CIDR,160.79.104.0/21,${EXIT},no-resolve`,
     `IP-ASN,399358,${EXIT},no-resolve`,
     ...PROCESS.map((p) => `PROCESS-NAME,${p},${EXIT}`),

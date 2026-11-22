@@ -396,10 +396,10 @@ A：
 
 | 类别 | 域名 / 规则 |
 | --- | --- |
-| Claude / Anthropic | `claude.ai` `claude.com` `clau.de` `anthropic.com` `claudeusercontent.com` `claudemcpcontent.com` `modelcontextprotocol.io`，含关键词 `anthropic` `claude`，以及 Anthropic 的 IP 段和 ASN |
-| 监控 / 风控 | `sentry.io` `datadoghq.com`（含 `browser-intake`）`growthbook.io` `usefathom.com` `segment.io` `siftscience.com` `intercom.io` `intercomcdn.com` |
+| Claude / Anthropic | `claude.ai` `claude.com` `clau.de` `anthropic.com` `claudeusercontent.com` `claudemcpcontent.com` `modelcontextprotocol.io` `ant.dev` `antspace.dev`，含关键词 `anthropic` `claude`，以及 IP 段 `34.8.0.0/16` `153.61.208.0/20` `153.61.224.0/22` `160.79.104.0/21` 和 ASN 399358 |
+| 监控 / 风控 | `sentry.io` `datadoghq.com`（含 `browser-intake`）`growthbook.io` `usefathom.com` `segment.io` `siftscience.com` `intercom.io` `intercomcdn.com` `intercomassets.com` `intercom-messenger.com` `statsigapi.net` |
 | 人机验证 | `hcaptcha.com` `challenges.cloudflare.com` `recaptcha.net` |
-| 支付 / 身份认证 | `stripe.com` `stripe.network` `stripecdn.com` `withpersona.com` |
+| 支付 / 身份认证 | `stripe.com` `stripe.network` `stripecdn.com` `withpersona.com` `yoti.com` |
 | Google | `google.com` `googleapis.com` `gstatic.com` `googleusercontent.com` `gmail.com` |
 | 安卓 App（仅 FlClash） | Claude App、Google Play、Google Wallet |
 | IP 检测 | `webshare.io` `ipinfo.io` |
