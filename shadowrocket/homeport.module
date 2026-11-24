@@ -24,6 +24,25 @@ IP-CIDR,153.61.224.0/22,🏠住宅出口-勿选,no-resolve
 IP-CIDR,160.79.104.0/21,🏠住宅出口-勿选,no-resolve
 IP-ASN,399358,🏠住宅出口-勿选,no-resolve
 
+# OpenAI / ChatGPT
+DOMAIN-SUFFIX,ai.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,api.statsig.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,auth0.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,chatgpt.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,chatgpt.livekit.cloud,🏠住宅出口-勿选
+DOMAIN-SUFFIX,client-api.arkoselabs.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,featuregates.org,🏠住宅出口-勿选
+DOMAIN-SUFFIX,host.livekit.cloud,🏠住宅出口-勿选
+DOMAIN-SUFFIX,identrust.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,launchdarkly.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,oaistatic.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,oaiusercontent.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,observeit.net,🏠住宅出口-勿选
+DOMAIN-SUFFIX,turn.livekit.cloud,🏠住宅出口-勿选
+DOMAIN-KEYWORD,openai,🏠住宅出口-勿选
+IP-CIDR,24.199.123.28/32,🏠住宅出口-勿选,no-resolve
+IP-CIDR,64.23.132.171/32,🏠住宅出口-勿选,no-resolve
+
 # 监控 / 风控 / 验证 / 支付
 DOMAIN-SUFFIX,sentry.io,🏠住宅出口-勿选
 DOMAIN-KEYWORD,browser-intake,🏠住宅出口-勿选

@@ -25,6 +25,12 @@ const SUFFIX = [
   "claude.ai", "claude.com", "clau.de", "anthropic.com",
   "claudeusercontent.com", "claudemcpcontent.com", "modelcontextprotocol.io",
   "ant.dev", "antspace.dev",
+  // OpenAI / ChatGPT
+  "ai.com", "api.statsig.com", "auth0.com",
+  "chatgpt.com", "chatgpt.livekit.cloud", "client-api.arkoselabs.com",
+  "featuregates.org", "host.livekit.cloud", "identrust.com",
+  "launchdarkly.com", "oaistatic.com", "oaiusercontent.com",
+  "observeit.net", "turn.livekit.cloud",
   // 监控 / 风控 / 验证 / 支付
   "sentry.io", "datadoghq.com", "growthbook.io", "usefathom.com", "segment.io",
   "siftscience.com", "hcaptcha.com", "challenges.cloudflare.com",
@@ -38,7 +44,7 @@ const SUFFIX = [
   "webshare.io", "ipinfo.io",
 ];
 
-const KEYWORD = ["anthropic", "claude", "browser-intake"];
+const KEYWORD = ["anthropic", "claude", "browser-intake", "openai"];
 
 const PROCESS = [
   "com.anthropic.claude",                 // Claude 安卓 App
@@ -81,6 +87,8 @@ const main = (config) => {
     `IP-CIDR,153.61.224.0/22,${EXIT},no-resolve`,
     `IP-CIDR,160.79.104.0/21,${EXIT},no-resolve`,
     `IP-ASN,399358,${EXIT},no-resolve`,
+    `IP-CIDR,24.199.123.28/32,${EXIT},no-resolve`,
+    `IP-CIDR,64.23.132.171/32,${EXIT},no-resolve`,
     ...PROCESS.map((p) => `PROCESS-NAME,${p},${EXIT}`),
   ];
   config.rules = rules.concat(config.rules || []);
