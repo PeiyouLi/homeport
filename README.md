@@ -223,6 +223,18 @@ homeport 做的事情很简单：把这些“敏感网站”单独挑出来，�
 
 3. 点 **下载**，确认模块列表里出现 `homeport` 且开关是打开的。
 
+### 合并模块：防泄露 + homeport + 广告拦截（三合一）
+
+如果你同时用这三个小火箭模块，可以只装下面这一个合并版，不用三个分开装：
+
+```
+https://raw.githubusercontent.com/PeiyouLi/homeport/main/shadowrocket/merged.module
+```
+
+它就是上面 `homeport` 模块 + 防泄露增强（加密 DNS、关 IPv6、拦截 STUN 端口）+ iFansClub ADBlock（广告拦截）合在一起的，规则顺序是广告拦截在前、住宅分流在后。装了合并版，就把原来那三个旧模块都停用，只开这一个。以后更新也是在模块列表里左滑它点更新。
+
+> 注意：合并版里的 homeport 规则和上面 `homeport` 模块是同一份，两个不要同时开。
+
 ### 第 2 步：添加住宅节点
 
 1. 首页右上角点 **＋**。
@@ -419,6 +431,8 @@ A：
 | `clash-party/override.yaml` | `+rules:` 下面加一行 `- DOMAIN-SUFFIX,example.com,🏠住宅出口-勿选` |
 | `flclash/homeport.js` | `SUFFIX` 数组里加 `"example.com",` |
 | `shadowrocket/homeport.module` | `[Rule]` 下面加一行 `DOMAIN-SUFFIX,example.com,🏠住宅出口-勿选` |
+
+`shadowrocket/merged.module` 是生成的合并文件（防泄露 + homeport + iFansClub ADBlock），不要手改：上面三份或上游广告模块有变化时，重新合并生成后再推。
 
 改完运行自检，确认三份一致：
 
