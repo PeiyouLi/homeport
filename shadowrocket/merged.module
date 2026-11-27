@@ -1,9 +1,9 @@
 #!name=Peiyou-合并模块
-#!desc=防泄露增强 + homeport + iFansClub ADBlock 合并版 | 2026-11-25 | REJECT 优先于住宅分流，三个旧模块停用后只开这一个
+#!desc=防泄露增强 + homeport + iFansClub ADBlock 合并版 | 2026-11-28 | REJECT 优先于住宅分流，三个旧模块停用后只开这一个
 
-# 合并来源（2026-11-25 实拉）：
+# 合并来源（2026-11-25 实拉，2026-11-28 同步 homeport 73 条）：
 #  1. 防泄露增强 (DNS & WebRTC)——截图原文重建，无 URL，无法自动更新
-#  2. homeport——PeiyouLi/homeport，本地与线上一致，62 条规则
+#  2. homeport——PeiyouLi/homeport，本地与线上一致，73 条规则
 #  3. iFansClub ADBlock——akiralereal/shadowrocket-toolkit，上游最后改动 2026-11-12（desc 里 10-21 未更新而已）
 # 顺序说明：广告 REJECT 在最前，adservice.google.com 这类命中 homeport google.com 后缀的广告域名仍会被拦；
 #  STUN/PORT 拦截在住宅分流之前，与原来三模块同时开的效果一致；ChatGPT 语音走 LiveKit TURN 3478 端口时可能受 PORT 3478 影响，
@@ -288,7 +288,7 @@ PORT,5349,REJECT
 IP-CIDR6,2607:6bc0::/48,REJECT,no-resolve
 IP-CIDR6,2607:6bc0:11::/48,REJECT,no-resolve
 
-# --- ④ homeport：走 🏠住宅出口-勿选（60 条）---
+# --- ④ homeport：走 🏠住宅出口-勿选（71 条）---
 # Anthropic IPv6 段经住宅代理会 502，先拒掉，客户端会自动回落 IPv4
 # Claude / Anthropic
 DOMAIN-SUFFIX,claude.ai,🏠住宅出口-勿选
@@ -307,6 +307,7 @@ IP-CIDR,153.61.208.0/20,🏠住宅出口-勿选,no-resolve
 IP-CIDR,153.61.224.0/22,🏠住宅出口-勿选,no-resolve
 IP-CIDR,160.79.104.0/21,🏠住宅出口-勿选,no-resolve
 IP-ASN,399358,🏠住宅出口-勿选,no-resolve
+
 # OpenAI / ChatGPT
 DOMAIN-SUFFIX,ai.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,api.statsig.com,🏠住宅出口-勿选
@@ -322,9 +323,13 @@ DOMAIN-SUFFIX,oaistatic.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,oaiusercontent.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,observeit.net,🏠住宅出口-勿选
 DOMAIN-SUFFIX,turn.livekit.cloud,🏠住宅出口-勿选
+DOMAIN-SUFFIX,chat.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,livekit.cloud,🏠住宅出口-勿选
+DOMAIN-SUFFIX,sora.com,🏠住宅出口-勿选
 DOMAIN-KEYWORD,openai,🏠住宅出口-勿选
 IP-CIDR,24.199.123.28/32,🏠住宅出口-勿选,no-resolve
 IP-CIDR,64.23.132.171/32,🏠住宅出口-勿选,no-resolve
+
 # 监控 / 风控 / 验证 / 支付
 DOMAIN-SUFFIX,sentry.io,🏠住宅出口-勿选
 DOMAIN-KEYWORD,browser-intake,🏠住宅出口-勿选
@@ -345,6 +350,7 @@ DOMAIN-SUFFIX,stripecdn.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,withpersona.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,yoti.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,statsigapi.net,🏠住宅出口-勿选
+
 # Google（含 Gmail、Google Pay）
 DOMAIN-SUFFIX,google.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,googleapis.com,🏠住宅出口-勿选
@@ -352,6 +358,16 @@ DOMAIN-SUFFIX,gstatic.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,googleusercontent.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,gmail.com,🏠住宅出口-勿选
 DOMAIN-SUFFIX,recaptcha.net,🏠住宅出口-勿选
+DOMAIN-SUFFIX,ai.google.dev,🏠住宅出口-勿选
+DOMAIN-SUFFIX,antigravity.google,🏠住宅出口-勿选
+DOMAIN-SUFFIX,antigravity-unleash.goog,🏠住宅出口-勿选
+DOMAIN-SUFFIX,deepmind.com,🏠住宅出口-勿选
+DOMAIN-SUFFIX,deepmind.google,🏠住宅出口-勿选
+DOMAIN-SUFFIX,generativeai.google,🏠住宅出口-勿选
+DOMAIN-SUFFIX,labs.google,🏠住宅出口-勿选
+DOMAIN-SUFFIX,notebooklm.google,🏠住宅出口-勿选
+
+
 # 出口 IP 检测
 DOMAIN-SUFFIX,webshare.io,🏠住宅出口-勿选
 DOMAIN-SUFFIX,ipinfo.io,🏠住宅出口-勿选
