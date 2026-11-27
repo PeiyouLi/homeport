@@ -73,6 +73,9 @@ proxy-groups+:
   - DOMAIN-SUFFIX,oaiusercontent.com,🏠住宅出口-勿选
   - DOMAIN-SUFFIX,observeit.net,🏠住宅出口-勿选
   - DOMAIN-SUFFIX,turn.livekit.cloud,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,chat.com,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,livekit.cloud,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,sora.com,🏠住宅出口-勿选
   - DOMAIN-KEYWORD,openai,🏠住宅出口-勿选
   - IP-CIDR,24.199.123.28/32,🏠住宅出口-勿选,no-resolve
   - IP-CIDR,64.23.132.171/32,🏠住宅出口-勿选,no-resolve
@@ -105,6 +108,15 @@ proxy-groups+:
   - DOMAIN-SUFFIX,googleusercontent.com,🏠住宅出口-勿选
   - DOMAIN-SUFFIX,gmail.com,🏠住宅出口-勿选
   - DOMAIN-SUFFIX,recaptcha.net,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,ai.google.dev,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,antigravity.google,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,antigravity-unleash.goog,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,deepmind.com,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,deepmind.google,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,generativeai.google,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,labs.google,🏠住宅出口-勿选
+  - DOMAIN-SUFFIX,notebooklm.google,🏠住宅出口-勿选
+
 
   # 出口 IP 检测
   - DOMAIN-SUFFIX,webshare.io,🏠住宅出口-勿选

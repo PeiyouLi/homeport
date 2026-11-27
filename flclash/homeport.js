@@ -31,6 +31,7 @@ const SUFFIX = [
   "featuregates.org", "host.livekit.cloud", "identrust.com",
   "launchdarkly.com", "oaistatic.com", "oaiusercontent.com",
   "observeit.net", "turn.livekit.cloud",
+  "chat.com", "livekit.cloud", "sora.com",
   // 监控 / 风控 / 验证 / 支付
   "sentry.io", "datadoghq.com", "growthbook.io", "usefathom.com", "segment.io",
   "siftscience.com", "hcaptcha.com", "challenges.cloudflare.com",
@@ -40,6 +41,9 @@ const SUFFIX = [
   // Google（含 Gmail、Google Pay）
   "google.com", "googleapis.com", "gstatic.com", "googleusercontent.com",
   "gmail.com", "recaptcha.net",
+  "ai.google.dev", "antigravity.google", "antigravity-unleash.goog",
+  "deepmind.com", "deepmind.google", "generativeai.google",
+  "labs.google", "notebooklm.google",
   // 出口 IP 检测
   "webshare.io", "ipinfo.io",
 ];
